@@ -11,9 +11,10 @@ close.addEventListener("click", () => {
 });
 
 
-const read = document.getElementById("btn");
 
-read.addEventListener("click", () => {
-    // Replace 'https://example.com' with the URL you want to open in a new tab
-    window.open('./page3.html', '_blank');
-});
+const buttons = document.getElementsByClassName("btn");
+for (const button of buttons) {
+    button.addEventListener("click", () => {
+        window.open('./page3.html', '_blank');
+    });
+}
